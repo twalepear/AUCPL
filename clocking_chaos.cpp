@@ -9,22 +9,18 @@ int main(){
 	for (int i = 0; i < N; i++){
 		std::cin >> C[i];
 	}
-	std::vector<float> V;
+	std::vector<float> V(N);
 	for (int i = 0; i < N; i++){
 		std::cin >> V[i];
 	}
 
-	int max_C = 0;
-	float max_V = 0;
+	float max_result = 0;
 	for (int i = 0; i < N; i++){
-		if (C[i] > max_C){
-			max_C = C[i];
+		if (C[i]*V[i] > max_result){
+			max_result = C[i]*V[i];
 		}
-		if (V[i] > max_V){
-			max_V = V[i];
 	}
-	float result = max_C * max_V;
-	std::cout << std::fixed << std::setprecision(3) << result << std::endl;
+	std::cout << std::fixed << std::setprecision(3) << max_result << std::endl;
 
 	return 0;
 }
