@@ -9,12 +9,12 @@ int main(){
 	for (int i = 0; i < N; i++){
 		std::cin >> C[i];
 	}
-	std::vector<float> V(N);
+	std::vector<double> V(N);
 	for (int i = 0; i < N; i++){
 		std::cin >> V[i];
 	}
 
-	float max_result = 0;
+	double max_result = C[0]*V[0];
 	for (int i = 0; i < N; i++){
 		if (C[i]*V[i] > max_result){
 			max_result = C[i]*V[i];
